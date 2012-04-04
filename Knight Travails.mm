@@ -426,7 +426,255 @@
 <node CREATED="1333430053918" ID="ID_1774751857" MODIFIED="1333430055227" TEXT="Yep."/>
 <node CREATED="1333430057700" ID="ID_1309875752" MODIFIED="1333430073741" TEXT="And could I then introduce the no-negatives rule?"/>
 <node CREATED="1333430074621" ID="ID_435911814" MODIFIED="1333430083414" TEXT="Well...yes, I suppose I could!"/>
+<node CREATED="1333430084499" ID="ID_1812797416" MODIFIED="1333430087077" TEXT="Sweet..."/>
+<node CREATED="1333430580729" ID="ID_1618162689" MODIFIED="1333430587773" TEXT="Huh, that was simp[le to change..."/>
 </node>
+<node CREATED="1333430931742" ID="ID_1546808731" MODIFIED="1333430936151" TEXT="OK, finish off this class now...">
+<node CREATED="1333433321571" ID="ID_1401750406" MODIFIED="1333433324838" TEXT="I think that&apos;s done..."/>
+</node>
+</node>
+<node CREATED="1333432570484" ID="ID_1805584603" MODIFIED="1333432579557" POSITION="right" TEXT="Later figure out how to deal with these long lines..."/>
+<node CREATED="1333441886429" ID="ID_789760565" MODIFIED="1333441893799" POSITION="right" TEXT="What to put Squares, Moves etc. in?">
+<node CREATED="1333441902577" ID="ID_1385796049" MODIFIED="1333441911852" TEXT="I&apos;ve got com.ir.knighttravails.board"/>
+<node CREATED="1333441912026" ID="ID_9440513" MODIFIED="1333441917781" TEXT="And these all belong to board"/>
+<node CREATED="1333441917981" ID="ID_158943349" MODIFIED="1333441995457" TEXT="So they&apos;re components of it?"/>
+<node CREATED="1333441995640" ID="ID_596261560" MODIFIED="1333442009511" TEXT="They&apos;re structures required for using it"/>
+<node CREATED="1333442009727" ID="ID_848970233" MODIFIED="1333442023938" TEXT="I think components makes enough sense..."/>
+<node CREATED="1333442265069" ID="ID_709292485" MODIFIED="1333442274116" TEXT="Do I want to break it down even more? Not particularly..."/>
+<node CREATED="1333442498346" ID="ID_493429059" MODIFIED="1333442509410" TEXT="Hmm, I think my way is OK at the moment, not too bad"/>
+</node>
+<node CREATED="1333443472888" ID="ID_1670337020" MODIFIED="1333444302295" POSITION="right" TEXT="OK, starting tests now. What to test?">
+<node CREATED="1333443732311" ID="ID_131297068" MODIFIED="1333443735880" TEXT="Simple2DCGPair">
+<node CREATED="1333444188959" ID="ID_156986073" MODIFIED="1333445546853" TEXT="Test that getValue works fine, only one necessary, since I know what&apos;s inside....">
+<node CREATED="1333445829266" ID="ID_981565808" MODIFIED="1333445838967" TEXT="No need, way too simple, cannot really break..."/>
+</node>
+<node CREATED="1333444195029" ID="ID_635340819" MODIFIED="1333444201106" TEXT="Test that add works fine"/>
+</node>
+<node CREATED="1333443564198" ID="ID_945554503" MODIFIED="1333443587347" TEXT="Simple2DCGSquare">
+<node CREATED="1333443616385" ID="ID_1741459453" MODIFIED="1333443637265" TEXT="Is there any need if we&apos;re testing the board anyway?"/>
+<node CREATED="1333443637959" ID="ID_794342048" MODIFIED="1333443644195" TEXT="Yes, would help isolate issues..."/>
+<node CREATED="1333455220543" ID="ID_1948748002" MODIFIED="1333455227842" TEXT="What does square have that needs to be tested?"/>
+<node CREATED="1333455228062" ID="ID_1974640459" MODIFIED="1333455239901" TEXT="No, let&apos;s not test this, way too simple, until we add distance perhaps"/>
+</node>
+<node CREATED="1333443587519" ID="ID_164421234" MODIFIED="1333443591823" TEXT="AlgoNotSquare">
+<node CREATED="1333455242640" ID="ID_1154186692" MODIFIED="1333455246141" TEXT="Definitely needs testing"/>
+</node>
+<node CREATED="1333443592027" ID="ID_679966565" MODIFIED="1333443602168" TEXT="NoRulesBoard"/>
+<node CREATED="1333443603886" ID="ID_72424879" MODIFIED="1333443607987" TEXT="Rectangular board"/>
+<node CREATED="1333443608170" ID="ID_1947682552" MODIFIED="1333443613036" TEXT="AlgoNotBoard"/>
+</node>
+<node CREATED="1333444302750" ID="ID_1451753564" MODIFIED="1333444308581" POSITION="right" TEXT="Where do tests get compiled to?">
+<node CREATED="1333444765179" ID="ID_453461196" MODIFIED="1333444770754" TEXT="Why is this so important?"/>
+<node CREATED="1333444983352" ID="ID_1171888276" MODIFIED="1333444991366" TEXT="OK, found, so it compiles into test-classes"/>
+<node CREATED="1333444991554" ID="ID_1433411627" MODIFIED="1333444998566" TEXT="Meanwhile, the src gets compiled to classes"/>
+</node>
+<node CREATED="1333447220289" ID="ID_1968878679" MODIFIED="1333447231991" POSITION="right" TEXT="OK, so I&apos;m testing the concrete implementations at the moment..."/>
+<node CREATED="1333447233361" ID="ID_1087882733" MODIFIED="1333447235060" POSITION="right" TEXT="OK..."/>
+<node CREATED="1333450704972" ID="ID_1810214027" MODIFIED="1333450712539" POSITION="right" TEXT="Something wrong with throwing the exception...."/>
+<node CREATED="1333450940481" ID="ID_1534349654" MODIFIED="1333450943991" POSITION="right" TEXT="Compilation">
+<node CREATED="1333450957768" ID="ID_1773351" MODIFIED="1333450957768" TEXT="javac -cp ./target/test-classes:/usr/share/java/junit4.jar -sourcepath ./src/main/java -d ./target/test-classes/ ./src/main/java/com/ir/knighttravails/board/components/*.java"/>
+</node>
+<node CREATED="1333451187901" ID="ID_1824332904" MODIFIED="1333451196695" POSITION="right" TEXT="Can I see why these calls are a bad idea?">
+<node CREATED="1333451197870" ID="ID_360108118" MODIFIED="1333451203906" TEXT="Partially created objects floating around"/>
+<node CREATED="1333451204147" ID="ID_197072737" MODIFIED="1333451854705" TEXT="Weird stuff where you access fields that are only created later...?"/>
+<node CREATED="1333451854962" ID="ID_1714936328" MODIFIED="1333451882232" TEXT="You should be able to use methods to  do things not done in constructor"/>
+<node CREATED="1333451963851" ID="ID_1565696758" MODIFIED="1333451972171" TEXT="OK, so instead make it implement Square?"/>
+<node CREATED="1333452637865" ID="ID_1026465669" MODIFIED="1333452645742" TEXT="Worried about the duplicated code..."/>
+</node>
+<node CREATED="1333451883129" ID="ID_266059398" MODIFIED="1333451889112" POSITION="right" TEXT="Removing the TwoDCG?">
+<node CREATED="1333451893353" ID="ID_987080549" MODIFIED="1333451897975" TEXT="It is rather confusing..."/>
+</node>
+<node CREATED="1333454413581" ID="ID_736408361" MODIFIED="1333454423341" POSITION="right" TEXT="OK, use checked or unchecked exceptions?">
+<node CREATED="1333454424146" ID="ID_817409960" MODIFIED="1333454428276" TEXT="Is this a recoverable error?"/>
+</node>
+<node CREATED="1333454625336" ID="ID_1478275951" MODIFIED="1333454628315" POSITION="right" TEXT="AlgNotSquare">
+<node CREATED="1333454629377" ID="ID_896906533" MODIFIED="1333454634088" TEXT="Unchecked or checked?">
+<node CREATED="1333454911834" ID="ID_146228011" MODIFIED="1333454925427" TEXT="So checked should be thrown unless it&apos;s an unrecoverable error"/>
+<node CREATED="1333454925628" ID="ID_402263618" MODIFIED="1333454940379" TEXT="In the case of bad data, I think it should be recoverable, you just try something else"/>
+<node CREATED="1333454940687" ID="ID_822153731" MODIFIED="1333454954587" TEXT="And we can catch it, rather than crashing and burning completely..."/>
+<node CREATED="1333455031075" ID="ID_951434724" MODIFIED="1333455060733" TEXT="Is it a programming problem? The code there has strangely decided to use a negative number on an AlgNot"/>
+<node CREATED="1333455060889" ID="ID_1614000995" MODIFIED="1333455068982" TEXT="Something is wrong in the code that caused it to do that"/>
+</node>
+<node CREATED="1333454634244" ID="ID_1033153250" MODIFIED="1333454644363" TEXT="Internal representation of coords? String or Pair?">
+<node CREATED="1333455117505" ID="ID_54805632" MODIFIED="1333455126236" TEXT="At some point I would need to implement one or the other"/>
+<node CREATED="1333455126411" ID="ID_1470737957" MODIFIED="1333455133559" TEXT="For getCoords I must output integer"/>
+<node CREATED="1333455133750" ID="ID_1055806418" MODIFIED="1333455140101" TEXT="For toString I must output string"/>
+<node CREATED="1333455140313" ID="ID_1909994273" MODIFIED="1333455147261" TEXT="At some point I will need to convert"/>
+<node CREATED="1333455148269" ID="ID_781727686" MODIFIED="1333455167860" TEXT="And also, the integer coords constructor would need me to write an int-&gt;string converter anyway"/>
+</node>
+<node CREATED="1333456848569" ID="ID_1763597607" MODIFIED="1333456877939" TEXT="Go up to H8 only?">
+<node CREATED="1333456879223" ID="ID_553496980" MODIFIED="1333456886028" TEXT="What does AA mean at the moment?"/>
+<node CREATED="1333456886264" ID="ID_13998190" MODIFIED="1333456893203" TEXT="It is the 00th square??"/>
+<node CREATED="1333456893455" ID="ID_852585196" MODIFIED="1333456936221" TEXT="Should be the 27th"/>
+<node CREATED="1333457073236" ID="ID_871919607" MODIFIED="1333457078859" TEXT="Damn the code is rather ugly..."/>
+<node CREATED="1333457558514" ID="ID_21711711" MODIFIED="1333457573816" TEXT="Well, it works...and it&apos;s about the best I can make it right now...so"/>
+<node CREATED="1333457573978" ID="ID_612480401" MODIFIED="1333457583507" TEXT="Wait, what if I use that parseInt creature?"/>
+<node CREATED="1333457583703" ID="ID_90044239" MODIFIED="1333457603825" TEXT="And just use a mapping to convert&quot;?"/>
+<node CREATED="1333457604025" ID="ID_60071705" MODIFIED="1333457620147" TEXT="So the reverse of what&apos;s being done in toString essentially.."/>
+<node CREATED="1333457621684" ID="ID_1482863884" MODIFIED="1333457625487" TEXT="Yeah, could do that..."/>
+<node CREATED="1333457625736" ID="ID_1327305488" MODIFIED="1333457722740" TEXT="Yep, it is cleaner than the whole powers thing, it uses existing functionality"/>
+<node CREATED="1333458277472" ID="ID_1400483907" MODIFIED="1333458284266" TEXT="Alright, is it reeeeally any better?"/>
+<node CREATED="1333458284510" ID="ID_630336389" MODIFIED="1333458294828" TEXT="Or would I be better off using modulo for real?"/>
+<node CREATED="1333458295624" ID="ID_1341849677" MODIFIED="1333458312274" TEXT="Here I&apos;m doing weirder ascii stuff"/>
+<node CREATED="1333458312459" ID="ID_1518968166" MODIFIED="1333458320516" TEXT="There I was doing strange stuff with powers..."/>
+<node CREATED="1333458323466" ID="ID_1180784650" MODIFIED="1333458327362" TEXT="Which is worse?"/>
+<node CREATED="1333458327589" ID="ID_813936876" MODIFIED="1333458333672" TEXT="This involves &quot;shifting&quot;"/>
+<node CREATED="1333458333842" ID="ID_865161130" MODIFIED="1333458346102" TEXT="That just involved maths, which is more understandable..."/>
+</node>
+<node CREATED="1333460772628" ID="ID_488580490" MODIFIED="1333460784519" TEXT="OK, so tests are going well, just need to tidy up the remainder of this AN code"/>
+<node CREATED="1333460785022" ID="ID_1628708890" MODIFIED="1333460793360" TEXT="Will write remaining tests tomorrow?"/>
+<node CREATED="1333460796828" ID="ID_1473567566" MODIFIED="1333460801059" TEXT="Running rather behind...!"/>
+</node>
+<node CREATED="1333461678849" ID="ID_1731807804" MODIFIED="1333461681498" POSITION="right" TEXT="Todo">
+<node CREATED="1333461682587" ID="ID_126150939" MODIFIED="1333461694175" TEXT="Finish AlgNot and its tests">
+<node CREATED="1333506161990" ID="ID_1922391028" MODIFIED="1333506163498" TEXT="OK, done."/>
+</node>
+<node CREATED="1333499823314" ID="ID_1781072637" MODIFIED="1333499834750" TEXT="Size sent to board must be positive or  maybe &gt; 1">
+<node CREATED="1333504546772" ID="ID_251223551" MODIFIED="1333504552357" TEXT="Need more comments about non-negatives..."/>
+<node CREATED="1333506215119" ID="ID_1152698151" MODIFIED="1333506232306" TEXT="Because RectBoard cannot accept negative squares"/>
+<node CREATED="1333506232507" ID="ID_1140243286" MODIFIED="1333506243987" TEXT="Neither can AlgNotBoard"/>
+<node CREATED="1333506245004" ID="ID_799133944" MODIFIED="1333506253458" TEXT="Hmm..."/>
+<node CREATED="1333506345493" ID="ID_826265958" MODIFIED="1333506350484" TEXT="Squares can be negativ"/>
+<node CREATED="1333506351050" ID="ID_815853341" MODIFIED="1333506355341" TEXT="Moves can be negative"/>
+<node CREATED="1333506355616" ID="ID_432890707" MODIFIED="1333506360571" TEXT="Sizes cannot be negative"/>
+<node CREATED="1333506445214" ID="ID_827462045" MODIFIED="1333506468527" TEXT="But I don&apos;t particularly want to introduce new classes for size, distance etc."/>
+<node CREATED="1333506468738" ID="ID_1540714023" MODIFIED="1333506477867" TEXT="Why did I introduce one for squares then?"/>
+<node CREATED="1333506757451" ID="ID_1082341108" MODIFIED="1333506768558" TEXT="Because it seemed like a reasonable structure to have for a board"/>
+<node CREATED="1333507079330" ID="ID_1412493114" MODIFIED="1333507086211" TEXT="So I&apos;m now adding comments around..."/>
+<node CREATED="1333507425355" ID="ID_179109489" MODIFIED="1333507437784" TEXT="Now, these sizes and squares could be based on user input"/>
+<node CREATED="1333507437939" ID="ID_1964645936" MODIFIED="1333507454694" TEXT="In that case I should be able to recover"/>
+<node CREATED="1333507455064" ID="ID_1929822938" MODIFIED="1333507474333" TEXT="I should catch and say it&apos;s wrong..."/>
+<node CREATED="1333507478484" ID="ID_158569883" MODIFIED="1333507501362" TEXT="OK, so therefore I shouldn&apos;t be using this unchecked one.."/>
+<node CREATED="1333508079663" ID="ID_225133744" MODIFIED="1333508081647" TEXT="Hmm..."/>
+</node>
+<node CREATED="1333508727114" ID="ID_669583093" MODIFIED="1333508731684" TEXT="Unchecked or checked">
+<node CREATED="1333508733255" ID="ID_375671902" MODIFIED="1333508741818" TEXT="Currently throwing unchecked"/>
+<node CREATED="1333508742032" ID="ID_918746778" MODIFIED="1333508753255" TEXT="Exceptions are to be used in exceptional circumstances"/>
+<node CREATED="1333508753467" ID="ID_1514785029" MODIFIED="1333508782129" TEXT="Here, I&apos;m trying to set something incorrectly, I&apos;m not constructing it as it wants to be constructed"/>
+<node CREATED="1333508782313" ID="ID_1405178745" MODIFIED="1333508853287" TEXT="And so I think it&apos;s valid for that to throw an error, because I&apos;m not just using it to handle bad input or something, it&apos;s really doing something wrong that you can&apos;t handle"/>
+<node CREATED="1333508853535" ID="ID_1861991669" MODIFIED="1333508857917" TEXT="Now unchecked or checked?"/>
+<node CREATED="1333508858106" ID="ID_278123246" MODIFIED="1333508909531" TEXT="The actions are creating squares and setting the size of the board"/>
+<node CREATED="1333508909722" ID="ID_424655131" MODIFIED="1333508916945" TEXT="If the arguments passed in arei nvalid..."/>
+<node CREATED="1333508917714" ID="ID_890127492" MODIFIED="1333508938829" TEXT="Then how should it fail?"/>
+<node CREATED="1333508939250" ID="ID_162499068" MODIFIED="1333509064500" TEXT="Is it within the program&apos;s control to fix or not?"/>
+<node CREATED="1333509107980" ID="ID_737896719" MODIFIED="1333509125530" TEXT="For example, AlgNot board is currently catching it and returning null for the move if it happens"/>
+<node CREATED="1333509125780" ID="ID_1627400201" MODIFIED="1333509132037" TEXT="I think checked is a better idea..."/>
+<node CREATED="1333509132270" ID="ID_1138086842" MODIFIED="1333509135146" TEXT="But which one?"/>
+<node CREATED="1333509201136" ID="ID_1220926624" MODIFIED="1333509227025" TEXT="What exactly is the problem? Well, you&apos;re getting a bad format or negatives where you should be getting positives..."/>
+<node CREATED="1333509227404" ID="ID_137523280" MODIFIED="1333509325494" TEXT="So it&apos;s an invalid input, "/>
+<node CREATED="1333509383812" ID="ID_592180330" MODIFIED="1333509406149" TEXT="Maybe BoardException? There doesn&apos;t seem to be any other sensible things"/>
+<node CREATED="1333510468948" ID="ID_439194695" MODIFIED="1333510471817" TEXT="Hmm"/>
+<node CREATED="1333510471981" ID="ID_1401798693" MODIFIED="1333510492132" TEXT="Now the test is messed up because I need to try catch on all the constructors"/>
+<node CREATED="1333510493004" ID="ID_1959122772" MODIFIED="1333510712815" TEXT="IndexOutOfBounds is a runtime exception"/>
+<node CREATED="1333510713428" ID="ID_6053383" MODIFIED="1333510721339" TEXT="It happens when you try and access something stupidly"/>
+<node CREATED="1333510721609" ID="ID_1041630688" MODIFIED="1333510913509" TEXT="See but it&apos;s not user input, is it?"/>
+<node CREATED="1333512386502" ID="ID_1859148379" MODIFIED="1333512389864" TEXT="954, 342"/>
+</node>
+<node CREATED="1333506602030" ID="ID_1363146382" MODIFIED="1333506609814" TEXT="Add throws Javadoc for where throws happen">
+<node CREATED="1333510266593" ID="ID_53479428" MODIFIED="1333510267562" TEXT="Done!"/>
+</node>
+<node CREATED="1333461694357" ID="ID_1170766725" MODIFIED="1333510312117" TEXT="Write tests for boards">
+<node CREATED="1333512535532" ID="ID_455459693" MODIFIED="1333512537954" TEXT="NoRulesBoard">
+<node CREATED="1333512539124" ID="ID_1278943001" MODIFIED="1333512542090" TEXT="Test it indirectly"/>
+</node>
+<node CREATED="1333512542873" ID="ID_1312278757" MODIFIED="1333512546454" TEXT="RectangularBaord">
+<node CREATED="1333512547873" ID="ID_91130193" MODIFIED="1333512553046" TEXT="Test all 4 directions"/>
+<node CREATED="1333512553903" ID="ID_580283344" MODIFIED="1333512559171" TEXT="Test that size works correctly"/>
+<node CREATED="1333512579417" ID="ID_1123502383" MODIFIED="1333512585288" TEXT="Test that size error is thrown correctly"/>
+<node CREATED="1333515594692" ID="ID_1030617512" MODIFIED="1333515595944" TEXT="Done."/>
+</node>
+<node CREATED="1333512586095" ID="ID_1012090608" MODIFIED="1333512598872" TEXT="AlgebraicNotationBoard">
+<node CREATED="1333515868819" ID="ID_476486263" MODIFIED="1333515874233" TEXT="OK, so what needs to be tested here?"/>
+<node CREATED="1333515874658" ID="ID_333400172" MODIFIED="1333516121204" TEXT="Test that it doesn&apos;t accept negatives"/>
+<node CREATED="1333516121398" ID="ID_1961436457" MODIFIED="1333516131782" TEXT="And that the string is correct"/>
+<node CREATED="1333516369557" ID="ID_1240030403" MODIFIED="1333516379966" TEXT="Huh...need to add a condition to ensure the start is not negative"/>
+<node CREATED="1333516380165" ID="ID_367167010" MODIFIED="1333516387942" TEXT="Or else you could have a negative starting pos!"/>
+<node CREATED="1333516519941" ID="ID_749132320" MODIFIED="1333516531630" TEXT="But isn&apos;t that a duplication of responsibility?"/>
+<node CREATED="1333516531809" ID="ID_1526360472" MODIFIED="1333516536421" TEXT="With Rectangular?"/>
+<node CREATED="1333516536621" ID="ID_269403672" MODIFIED="1333516542780" TEXT="Yes, yes it is..."/>
+<node CREATED="1333517176049" ID="ID_70168473" MODIFIED="1333517187459" TEXT="So if I create a NoNegative board"/>
+<node CREATED="1333517187590" ID="ID_274504177" MODIFIED="1333517199527" TEXT="What it would do is check that the starting square is not negative "/>
+<node CREATED="1333517199798" ID="ID_1646604299" MODIFIED="1333517205236" TEXT="And that the ending square is not negative"/>
+<node CREATED="1333517205447" ID="ID_1901652035" MODIFIED="1333517221885" TEXT="And then passing that up to rectangular, it would ensure that it&apos;s within the boundary"/>
+<node CREATED="1333517222042" ID="ID_25348017" MODIFIED="1333517324301" TEXT="Hmm, OK, sure, but what&apos;s to prevent me using something different underneath?"/>
+<node CREATED="1333517324437" ID="ID_1412456133" MODIFIED="1333517332893" TEXT="This is a problem..."/>
+<node CREATED="1333517411491" ID="ID_955010079" MODIFIED="1333517422526" TEXT="These decorators basically allow me to introduce rules"/>
+<node CREATED="1333517422717" ID="ID_638307758" MODIFIED="1333517429681" TEXT="Rectangular constricted it to a rectangle"/>
+<node CREATED="1333517429875" ID="ID_1436987679" MODIFIED="1333517469397" TEXT="Now AlgNot decorator will produce ANSquares"/>
+<node CREATED="1333517469566" ID="ID_273334235" MODIFIED="1333517477282" TEXT="Could it just be a restriction of the decorator?"/>
+<node CREATED="1333517806453" ID="ID_362411685" MODIFIED="1333517824877" TEXT="Otherwise you&apos;re just rewriting stuff..."/>
+<node CREATED="1333519630483" ID="ID_1057206872" MODIFIED="1333519633631" TEXT="Hmm..."/>
+</node>
+<node CREATED="1333512563278" ID="ID_1452104282" MODIFIED="1333512571934" TEXT="Move is tested indirectly"/>
+</node>
+<node CREATED="1333519637043" ID="ID_1421608801" MODIFIED="1333519889633" TEXT="Right, so what about this Decorator issue?">
+<node CREATED="1333519890815" ID="ID_107228943" MODIFIED="1333519919895" TEXT="Currently AlgNotBoard will fail if given a negative square"/>
+<node CREATED="1333519920250" ID="ID_121546651" MODIFIED="1333519934304" TEXT="So it must decorate a board that doesn&apos;t allow negatives"/>
+<node CREATED="1333519934460" ID="ID_1339138653" MODIFIED="1333519950154" TEXT="I could implement that inside AlgNot, but that defeats the purpose of this whole thing"/>
+<node CREATED="1333519950492" ID="ID_373722102" MODIFIED="1333519978898" TEXT="So at the moment i&apos;ve just got a comment that says to do it a certain way"/>
+<node CREATED="1333519979050" ID="ID_1483763810" MODIFIED="1333519983009" TEXT="Is that sufficient?"/>
+<node CREATED="1333519983383" ID="ID_1612319540" MODIFIED="1333519986757" TEXT="What are the alternatives?"/>
+<node CREATED="1333519986944" ID="ID_601887475" MODIFIED="1333520000639" TEXT="Don&apos;t want to be rewriting any boundary checking code"/>
+<node CREATED="1333520000982" ID="ID_368764858" MODIFIED="1333520011442" TEXT="instanceof seems ugly..."/>
+<node CREATED="1333520011691" ID="ID_1724941130" MODIFIED="1333520024136" TEXT="And it doesn&apos;t allow for other non-negative boards"/>
+<node CREATED="1333520024314" ID="ID_1280058606" MODIFIED="1333520034673" TEXT="So, leave it this way? For now , yes"/>
+</node>
+<node CREATED="1333461697685" ID="ID_936658459" MODIFIED="1333461710404" TEXT="Set up client code (pieces, paths, pathfinder)">
+<node CREATED="1333522151055" ID="ID_1204465428" MODIFIED="1333522191445" TEXT="Skipping ant for now"/>
+<node CREATED="1333522155163" ID="ID_1233274638" MODIFIED="1333522169079" TEXT="Instead, moving onto &quot;client&quot; code"/>
+<node CREATED="1333522266730" ID="ID_1798419696" MODIFIED="1333522267889" TEXT="Piece">
+<node CREATED="1333522274442" ID="ID_1707510756" MODIFIED="1333522278902" TEXT="Quite natural"/>
+<node CREATED="1333522279061" ID="ID_1497147629" MODIFIED="1333522290284" TEXT="Needs to tell you what its valid moves are from its current position"/>
+<node CREATED="1333522290448" ID="ID_1531718918" MODIFIED="1333522304703" TEXT="Should I call it getPos() or getCurr()?"/>
+<node CREATED="1333522304952" ID="ID_1266277535" MODIFIED="1333522552399" TEXT="Will have a SimplePiece that will be extended by KnightPiece, might be abstract"/>
+<node CREATED="1333522638090" ID="ID_564757417" MODIFIED="1333522690199" TEXT="Does it own a board? Or does the board simply get passed in?"/>
+<node CREATED="1333522690401" ID="ID_530352870" MODIFIED="1333522698424" TEXT="Does the board own it? No."/>
+<node CREATED="1333522698639" ID="ID_37186609" MODIFIED="1333522790688" TEXT="setCurrent would set where the piece is"/>
+<node CREATED="1333522790815" ID="ID_506082693" MODIFIED="1333522798375" TEXT="Would this have to be validated by the board?"/>
+<node CREATED="1333522798784" ID="ID_1745296053" MODIFIED="1333522829666" TEXT="Instead I can just let the piece store these things and then later use the board to validate it all"/>
+<node CREATED="1333522829842" ID="ID_749132809" MODIFIED="1333522965815" TEXT="Benefits of storing a board?"/>
+<node CREATED="1333522976318" FOLDED="true" ID="ID_962658144" MODIFIED="1333525233680" TEXT="Benefits of this way?">
+<node CREATED="1333522985344" ID="ID_1788323709" MODIFIED="1333522991702" TEXT="validDestinations makes sense"/>
+<node CREATED="1333522992398" ID="ID_287584531" MODIFIED="1333522992398" TEXT=""/>
+</node>
+<node CREATED="1333525234638" ID="ID_786165606" MODIFIED="1333525241914" TEXT="Should I send Board to getMoveDistances?"/>
+<node CREATED="1333525242510" ID="ID_1860924388" MODIFIED="1333525248678" TEXT="Or would that just complicate things?"/>
+<node CREATED="1333525250762" ID="ID_1997974693" MODIFIED="1333525255157" TEXT="Yeah, I think it would"/>
+<node CREATED="1333525279304" ID="ID_1183329261" MODIFIED="1333525300790" TEXT="For infinite moves you&apos;d probably create another class, maybe InfinityPiece or something epic-sounding like that..."/>
+<node CREATED="1333526301647" ID="ID_479318027" MODIFIED="1333526304233" TEXT="Testing now..."/>
+<node CREATED="1333526556437" ID="ID_996798114" MODIFIED="1333526567362" TEXT="OK, so now I somehow need to check that the collection contains certain squares"/>
+<node CREATED="1333526567534" ID="ID_803237964" MODIFIED="1333526571154" TEXT="This would involve what?"/>
+<node CREATED="1333526571335" ID="ID_1985003836" MODIFIED="1333526586342" TEXT="Having an equals method for Squares? And hence for Pair?"/>
+<node CREATED="1333526861780" ID="ID_1348644361" MODIFIED="1333526870321" TEXT="Damn, then I have to do hashcode etc. too???"/>
+<node CREATED="1333526871506" ID="ID_363268178" MODIFIED="1333526879174" TEXT="I&apos;ll have to do equals eventually anyway"/>
+<node CREATED="1333526969444" ID="ID_826182749" MODIFIED="1333526974220" TEXT="Collections are for what?"/>
+<node CREATED="1333526974464" ID="ID_1928039560" MODIFIED="1333526982553" TEXT="They&apos;re for when you&apos;re going to be adding/removing things?"/>
+<node CREATED="1333526982701" ID="ID_1202900279" MODIFIED="1333526990001" TEXT="So why am I returning collections in this case?"/>
+<node CREATED="1333527108935" ID="ID_65630596" MODIFIED="1333527115865" TEXT="That&apos;s a good question, why am I...?"/>
+<node CREATED="1333527116627" ID="ID_1482551697" MODIFIED="1333527135856" TEXT="Because I don&apos;t expect the contents to ever be added or removed from, do I?"/>
+<node CREATED="1333527136714" ID="ID_912203739" MODIFIED="1333530400560" TEXT="So, collections or arrays?"/>
+<node CREATED="1333530446538" ID="ID_1773628995" MODIFIED="1333530450098" TEXT="Collections it is."/>
+</node>
+</node>
+<node CREATED="1333527688119" ID="ID_1505212321" MODIFIED="1333527690907" TEXT="Testing pieces">
+<node CREATED="1333527693230" ID="ID_1026637323" MODIFIED="1333527709217" TEXT="I need an equals method to check if squares are the same"/>
+<node CREATED="1333527709390" ID="ID_418050390" MODIFIED="1333527716546" TEXT="I&apos;ll eventually need it anyway?"/>
+<node CREATED="1333527743736" ID="ID_795709580" MODIFIED="1333527760163" TEXT="Problem is, how do I guarantee they&apos;re going to have an equals method?"/>
+<node CREATED="1333527761398" ID="ID_830442834" MODIFIED="1333527865187" TEXT="It&apos;s going to depend upon how the board implements it and that will depend on how the square and pair implement it"/>
+<node CREATED="1333527865358" ID="ID_569745105" MODIFIED="1333527870603" TEXT="So we just have to trust in that"/>
+<node CREATED="1333527871427" ID="ID_143508521" MODIFIED="1333527873257" TEXT="OK then"/>
+<node CREATED="1333528312467" ID="ID_133068902" MODIFIED="1333528323366" TEXT="And am I going to force the pairs to be of the same class?"/>
+<node CREATED="1333528323565" ID="ID_638267179" MODIFIED="1333528353922" TEXT="Yes, because otherwise subclasses could have additional stuff or they could be an entirely different quantity...like Score or something"/>
+<node CREATED="1333529334019" ID="ID_366627686" MODIFIED="1333529338626" TEXT="OK, implemented for Pair"/>
+<node CREATED="1333529338697" ID="ID_1986279918" MODIFIED="1333529394150" TEXT="Now for square..."/>
+<node CREATED="1333529395110" ID="ID_947157486" MODIFIED="1333530104509" TEXT="OK, so why are we finalising when we use instanceof?"/>
+<node CREATED="1333530065296" ID="ID_1402798365" MODIFIED="1333530090728" TEXT="Because that way subclasses can&apos;t implement it and screw up the conditions for equality (sym, trans, refl, etc.)"/>
+<node CREATED="1333530105457" ID="ID_345360651" MODIFIED="1333530123397" TEXT="And this way there won&apos;t be any unexpected stuff when ANSquares mix with Simple ones, since they&apos;re all the same"/>
+<node CREATED="1333531403773" ID="ID_855492592" MODIFIED="1333531406906" TEXT="OK, piece is done!"/>
+</node>
+<node CREATED="1333461858100" ID="ID_1205085088" MODIFIED="1333461862138" TEXT="Write tests for that"/>
+<node CREATED="1333461862371" ID="ID_1311374328" MODIFIED="1333461869474" TEXT="Complete ant script"/>
+<node CREATED="1333515386248" ID="ID_373903813" MODIFIED="1333515391792" TEXT="Protected is OK to use?"/>
 </node>
 </node>
 </map>
