@@ -13,10 +13,10 @@ public class SimplePathFinder<T extends FinderNode> implements PathFinder {
         this.nodeFactory = nodeFactory;
     }
 
-    public Path findPath(Board b, Piece p, Square start, Square destination) {
+    public Path findPath(Board b, Piece p, Square destination) {
         q.clear();
 
-        T node = nodeFactory.make(start, null);
+        T node = nodeFactory.make(p.getCurrent(), null);
         while (!(node.getSquare().equals(destination)) && node != null) {
             p.setCurrent(node.getSquare());
             for (Square s : p.validDestinations(b)) {

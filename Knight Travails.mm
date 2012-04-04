@@ -751,9 +751,24 @@
 <node CREATED="1333542831885" ID="ID_891318664" MODIFIED="1333542837387" TEXT="And I prefer it that way..."/>
 <node CREATED="1333542838163" ID="ID_1035757577" MODIFIED="1333542840699" TEXT="Excellent."/>
 <node CREATED="1333543788885" ID="ID_478055325" MODIFIED="1333543797233" TEXT="Awesome, haven&apos;t referred to a concrete type in ages..."/>
+<node CREATED="1333543956408" ID="ID_741391111" MODIFIED="1333543962064" TEXT="So what does a FinderNode store?"/>
+<node CREATED="1333543984225" ID="ID_1981543678" MODIFIED="1333543990030" TEXT="Just a square and its previous node?"/>
+<node CREATED="1333544328343" ID="ID_112887887" MODIFIED="1333544331920" TEXT="Yes, this would work."/>
 </node>
 <node CREATED="1333537780879" ID="ID_984441566" MODIFIED="1333537824661" TEXT="That&apos;ll contain squares and the current path"/>
 <node CREATED="1333537973152" ID="ID_142119053" MODIFIED="1333537975968" TEXT="OK, and then what?"/>
+<node CREATED="1333544348249" ID="ID_805593403" MODIFIED="1333544354679" TEXT="Problem with SimpleFinderNode">
+<node CREATED="1333544722937" ID="ID_824068586" MODIFIED="1333544740262" TEXT="Well, I can restrict it to always use SimpleFinderNode, because my constructor is allowed to guarantee that"/>
+<node CREATED="1333544740903" ID="ID_1460292233" MODIFIED="1333544782297" TEXT="Is that a good choice though?"/>
+<node CREATED="1333544782600" ID="ID_1305343780" MODIFIED="1333544805353" TEXT="There&apos;s no real problem with it, nobody&apos;s every going to create one manually......"/>
+<node CREATED="1333544805549" ID="ID_188364562" MODIFIED="1333544810197" TEXT="Hmm, let&apos;s use it for now."/>
+</node>
+<node CREATED="1333545686881" ID="ID_1731696723" MODIFIED="1333545690839" TEXT="How to accept input?">
+<node CREATED="1333545745131" ID="ID_922868066" MODIFIED="1333545763071" TEXT="Can either be as an arg"/>
+<node CREATED="1333545763234" ID="ID_1953363401" MODIFIED="1333545784064" TEXT="Or it can be an user input"/>
+<node CREATED="1333545784792" ID="ID_667385781" MODIFIED="1333545822025" TEXT="Let&apos;s use args, easier"/>
+</node>
+<node CREATED="1333547942130" ID="ID_1141852990" MODIFIED="1333547950065" TEXT="IT WORKS!! RAAAAWWWWWK!"/>
 </node>
 </node>
 </node>

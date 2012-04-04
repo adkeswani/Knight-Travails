@@ -20,6 +20,7 @@ public class SimplePath implements Path {
     }
 
     public Iterator<Square> iterator() {
-        return squares.iterator();
+        //TODO: This will fair for 0 length paths!!!
+        return squares.listIterator(1);
     }
 }
