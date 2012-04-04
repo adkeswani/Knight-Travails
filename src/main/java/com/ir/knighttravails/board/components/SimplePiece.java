@@ -1,7 +1,7 @@
 package com.ir.knighttravails.board.components;
 import com.ir.knighttravails.board.Board;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A default implementation of Piece
@@ -21,8 +21,8 @@ public abstract class SimplePiece implements Piece {
         this.current = current;
     }
 
-    public Collection<Square> validDestinations(Board b) {
-        Collection<Square> destinations = new ArrayList<Square>();
+    public Set<Square> validDestinations(Board b) {
+        Set<Square> destinations = new HashSet<Square>();
 
         //Try moving each of the possible distances to determine valid destinations
         for (Pair distance : getMoveDistances()) {
@@ -38,5 +38,5 @@ public abstract class SimplePiece implements Piece {
     /**
      * @return all of the distances that this piece can move from its current square
      */
-    protected abstract Collection<Pair> getMoveDistances();
+    protected abstract Set<Pair> getMoveDistances();
 }

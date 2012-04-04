@@ -1,6 +1,6 @@
 package com.ir.knighttravails.board.components;
 import com.ir.knighttravails.board.Board;
-import java.util.Collection;
+import java.util.Set;
 
 /**
  * Represents a piece on a game board.
@@ -23,5 +23,5 @@ public interface Piece {
      * @param   b the board whose rules to use
      * @return  the squares the piece can reach
      */
-    public Collection<Square> validDestinations(Board b);
+    public Set<Square> validDestinations(Board b);
 }

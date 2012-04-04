@@ -1,7 +1,7 @@
 package com.ir.knighttravails.board.components;
 import com.ir.knighttravails.board.Board;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A piece that moves like a chess knight
@@ -13,8 +13,8 @@ public class KnightPiece extends SimplePiece {
     }
 
     @Override
-    protected Collection<Pair> getMoveDistances() {
-        Collection<Pair> moveDistances = new ArrayList<Pair>();
+    protected Set<Pair> getMoveDistances() {
+        Set<Pair> moveDistances = new HashSet<Pair>();
 
         moveDistances.add(new SimplePair(-2, -1));
         moveDistances.add(new SimplePair(-2, 1));
