@@ -25,12 +25,12 @@
 
     <target name="compile.main" depends="init" description="compile main">
         <mkdir dir="${target.main.dir}"/>
-        <javac srcdir="${src.main.dir}" destdir="${target.main.dir}" classpath="${libs}"/>
+        <javac includeantruntime="false" srcdir="${src.main.dir}" destdir="${target.main.dir}" classpath="${libs}"/>
     </target>
 
     <target name="compile.test" depends="init" description="compile test">
         <mkdir dir="${target.test.dir}"/>
-        <javac srcdir="${src.test.dir}:${src.main.dir}" destdir="${target.test.dir}" classpath="${libs}"/>
+        <javac includeantruntime="false" srcdir="${src.test.dir}:${src.main.dir}" destdir="${target.test.dir}" classpath="${libs}"/>
     </target>
 
     <target name="getargs.main" unless="start,destination" description="gets arguments for main">
