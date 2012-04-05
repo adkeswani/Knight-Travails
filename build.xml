@@ -1,4 +1,4 @@
-<project name="Knight Travails" default="main" basedir=".">
+<project name="Knight-Travails" default="main" basedir=".">
     <description>
         builds and runs the knight travails program and tests
     </description>
@@ -68,7 +68,7 @@
         <copy todir="${jar.lib.dir}">
             <fileset dir="${lib.dir}"/>
         </copy>
-        <jar destfile="${target.jar.dir}/${ant.project.name}-${TSTAMP}-${DSTAMP}.jar" basedir="${target.main.dir}">
+        <jar destfile="${target.jar.dir}/${ant.project.name}.jar" basedir="${target.main.dir}">
             <manifest>
                 <attribute name="Main-Class" value="com.ir.knighttravails.KnightTravailsSolver"/>
                 <attribute name="Class-Path" value="${jar.classpath}"/>
