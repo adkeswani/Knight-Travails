@@ -3,7 +3,7 @@ import com.ir.knighttravails.board.components.Square;
 import java.util.Iterator;
 
 /**
- * Represents a path between two squares on a board
+ * Path between two squares on a board
  */
 public interface Path extends Iterable<Square> {
     /**

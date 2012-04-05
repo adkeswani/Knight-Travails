@@ -62,7 +62,7 @@ public class KnightTravailsSolver {
 
     //Returns path as a string in the format required by the assignment
     //i.e. space separated, no start square
-    private static String getPathString(Path p) {
+    public static String getPathString(Path p) {
         StringBuilder pathString = new StringBuilder();
         Iterator<Square> pathSquares = p.iterator();
 
@@ -81,10 +81,13 @@ public class KnightTravailsSolver {
     public static void main(String[] args) {
         if (args.length < 2) {
             System.out.println("Requires 2 chess squares in algebraic notation as arguments");
+            return;
         }
 
         KnightTravailsSolver solver = new KnightTravailsSolver();
         Path solution = solver.solve(args[0], args[1]);
-        System.out.println(getPathString(solution));
+        if (solution != null) {
+            System.out.println(getPathString(solution));
+        }
     }
 }

@@ -25,7 +25,7 @@ public abstract class SimplePiece implements Piece {
         Set<Square> destinations = new HashSet<Square>();
 
         //Try moving each of the possible distances to determine valid destinations
-        for (Pair distance : getMoveDistances()) {
+        for (Pair distance : getMoveDistanceSet()) {
             Square s = b.doMove(new SimpleMove(current, distance));
             if (s != null) {
                 destinations.add(s);
@@ -36,7 +36,7 @@ public abstract class SimplePiece implements Piece {
     }
 
     /**
-     * @return all of the distances that this piece can move from its current square
+     * @return  set of distances that this piece can move from its current square
      */
-    protected abstract Set<Pair> getMoveDistances();
+    protected abstract Set<Pair> getMoveDistanceSet();
 }

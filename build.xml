@@ -1,73 +1,78 @@
-<project name="KnightTravails" default="main" basedir=".">
+<project name="Knight Travails" default="main" basedir=".">
     <description>
         builds and runs the knight travails program and tests
     </description>
 
-    <property name="src.main.dir"       location="src/main/java">
-    <property name="target.main.dir"    location="target/classes"/>
+    <property name="target.dir"         location="target"/>
+
+    <property name="src.main.dir"       location="src/main/java"/>
+    <property name="target.main.dir"    location="${target.dir}/classes"/>
 
     <property name="src.test.dir"       location="src/test/java"/>
-    <property name="target.test.dir"    location="target/test-classes"/>
+    <property name="target.test.dir"    location="${target.dir}/test-classes"/>
+
+    <property name="target.jar.dir"     location="${target.dir}/jar"/>
+    <property name="jar.lib.dir"        location="${target.jar.dir}/lib"/>
+    <property name="jar.classpath"      value="lib/junit-4.10.jar lib/commons-lang-2.6.jar"/>
+
+    <property name="lib.dir"            location="lib"/>
+    <property name="libs"               location="${lib.dir}/junit-4.10.jar:${lib.dir}/commons-lang-2.6.jar"/>
 
     <target name="init">
-    <!-- Create the time stamp -->
-    <tstamp/>
-    <!-- Create the build directory structure used by compile -->
-    <mkdir dir="${build}"/>
+        <tstamp/>
+        <mkdir dir="${target.dir}"/>
     </target>
 
-
-    <target name="compile" depends="init" description="compile the source" >
-        <javac srcdir="${src}" destdir="${build}"/>
+    <target name="compile.main" depends="init" description="compile main">
+        <mkdir dir="${target.main.dir}"/>
+        <javac srcdir="${src.main.dir}" destdir="${target.main.dir}" classpath="${libs}"/>
     </target>
 
-    <target name="run" depends="compile">
-        <java classname="">
+    <target name="compile.test" depends="init" description="compile test">
+        <mkdir dir="${target.test.dir}"/>
+        <javac srcdir="${src.test.dir}:${src.main.dir}" destdir="${target.test.dir}" classpath="${libs}"/>
+    </target>
 
+    <target name="getargs.main" unless="start,destination" description="gets arguments for main">
+        <input addProperty="start" message="Enter the start square in algebraic notation:"/>
+        <input addProperty="destination" message="Enter the destination square in algebraic notation:"/>
+    </target>
+
+    <target name="run.main" depends="compile.main, getargs.main" description="run main without cleaning">
+        <java classname="com.ir.knighttravails.KnightTravailsSolver" classpath="${libs}:${target.main.dir}">
+            <arg value="${start}"/>
+            <arg value="${destination}"/>
         </java>
     </target>
 
-    <target name="main" depends="clean,run">
-
-
-
-
-
-
-
-
-
-
-
-    <target name = "runtests" depends = "compile">
-        <java classname = "">
-
+    <target name="run.test" depends="compile.test" description="run test without cleaning">
+        <java classname="org.junit.runner.JUnitCore" classpath="${libs}:${target.test.dir}">
+            <arg value="com.ir.knighttravails.KnightTravailsTestSuite"/>
         </java>
     </target>
 
+    <target name="clean.main" description="clean up main" >
+        <delete dir="${target.main.dir}"/>
+    </target>
 
+    <target name="clean.test" description="clean up test" >
+        <delete dir="${target.test.dir}"/>
+    </target>
 
+    <target name="main" depends="clean.main,run.main" description="clean and run main"/>
 
+    <target name="test" depends="clean.main,clean.test,run.test" description="clean and run test"/>
 
-
-
-
-
-
-
-
-
-  <target name="dist" depends="compile"
-        description="generate the distribution" >
-    <!-- Create the distribution directory -->
-    <mkdir dir="${dist}/lib"/>
-
-    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
-    <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}"/>
-  </target>
-
-    <target name="clean" description="clean up" >
-        <delete dir="${build}"/>
-        <delete dir="${dist}"/>
+    <target name="jar" depends="clean.main,compile.main" description="generate jar file">
+        <mkdir dir="${target.jar.dir}"/>
+        <copy todir="${jar.lib.dir}">
+            <fileset dir="${lib.dir}"/>
+        </copy>
+        <jar destfile="${target.jar.dir}/${ant.project.name}-${TSTAMP}-${DSTAMP}.jar" basedir="${target.main.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="com.ir.knighttravails.KnightTravailsSolver"/>
+                <attribute name="Class-Path" value="${jar.classpath}"/>
+            </manifest>
+        </jar>
     </target>
 </project>

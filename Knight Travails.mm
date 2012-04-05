@@ -798,12 +798,12 @@
 <node CREATED="1333549783818" ID="ID_1063092152" MODIFIED="1333586152187" TEXT="Write all documentation">
 <node CREATED="1333588122998" ID="ID_758375264" MODIFIED="1333588124187" TEXT=" Done!"/>
 </node>
-<node CREATED="1333586153220" ID="ID_322316739" MODIFIED="1333586168035" TEXT="What happens if there is no path, won&apos;t this loop forever?!">
+<node CREATED="1333586153220" FOLDED="true" ID="ID_322316739" MODIFIED="1333607888569" TEXT="What happens if there is no path, won&apos;t this loop forever?!">
 <node CREATED="1333586408212" ID="ID_1983554464" MODIFIED="1333586413323" TEXT="A collection of squares"/>
 <node CREATED="1333586413604" ID="ID_1026019487" MODIFIED="1333586428804" TEXT="Check if the current square is already contained in it"/>
 <node CREATED="1333588427073" ID="ID_14484350" MODIFIED="1333588428073" TEXT="Done."/>
 </node>
-<node CREATED="1333549774092" ID="ID_422978491" MODIFIED="1333588743824" TEXT="Finish up FinderNode and do all cleanup">
+<node CREATED="1333549774092" FOLDED="true" ID="ID_422978491" MODIFIED="1333607890513" TEXT="Finish up FinderNode and do all cleanup">
 <node CREATED="1333588780817" ID="ID_1892419511" MODIFIED="1333588786870" TEXT="OK, so I want some sort of A* creature"/>
 <node CREATED="1333588787109" ID="ID_1406724868" MODIFIED="1333588837657" TEXT="It should be in a priority queue"/>
 <node CREATED="1333588837900" ID="ID_1944929844" MODIFIED="1333588869800" TEXT="So the Nodes should be comparable"/>
@@ -827,7 +827,7 @@
 <node CREATED="1333591045829" ID="ID_503760680" MODIFIED="1333591049548" TEXT="Yep, I can do that!"/>
 <node CREATED="1333589479698" ID="ID_1672967499" MODIFIED="1333589495006" TEXT="And then one specifically for Knights."/>
 </node>
-<node CREATED="1333586973305" ID="ID_1595651826" MODIFIED="1333595112238" TEXT="Sort out KnightTravails">
+<node CREATED="1333586973305" FOLDED="true" ID="ID_1595651826" MODIFIED="1333607891967" TEXT="Sort out KnightTravails">
 <node CREATED="1333595116198" ID="ID_1949543571" MODIFIED="1333595123295" TEXT="What should interface be?"/>
 <node CREATED="1333595123492" ID="ID_1604093981" MODIFIED="1333595127213" TEXT="Should it just print path?"/>
 <node CREATED="1333595127401" ID="ID_1911591924" MODIFIED="1333595134271" TEXT="Or should main be expected to print it itself?"/>
@@ -836,10 +836,76 @@
 <node CREATED="1333595113471" ID="ID_1607739246" MODIFIED="1333595114216" TEXT=" so that it doesn&apos;t print first square"/>
 <node CREATED="1333597725865" ID="ID_1455627692" MODIFIED="1333597729730" TEXT="OK, cleaned up."/>
 </node>
+<node CREATED="1333549831446" ID="ID_1440941427" MODIFIED="1333597739104" TEXT="Write ant build">
+<node CREATED="1333598862054" ID="ID_1210509870" MODIFIED="1333598868943" TEXT="May need to add target to classpath"/>
+<node CREATED="1333600835913" ID="ID_554795040" MODIFIED="1333600844476" TEXT="Alright, nearly there..."/>
+<node CREATED="1333602183174" ID="ID_1393606571" MODIFIED="1333602191469" TEXT="Just need to jar, "/>
+<node CREATED="1333602702015" ID="ID_1865086763" MODIFIED="1333602707352" TEXT="Curse this jar nonsense!!!"/>
+<node CREATED="1333603960885" ID="ID_168349558" MODIFIED="1333603964480" TEXT="OK, some back to it later"/>
+<node CREATED="1333603964631" ID="ID_307183883" MODIFIED="1333603967953" TEXT="For now, get the suite up"/>
+<node CREATED="1333605005178" ID="ID_1178488169" MODIFIED="1333605014057" TEXT="Awesome, suite working, stupid hamcrest...."/>
+</node>
 <node CREATED="1333549796205" ID="ID_1925491866" MODIFIED="1333549799430" TEXT="Write tests">
 <node CREATED="1333591805979" ID="ID_1585099657" MODIFIED="1333591897360" TEXT="Subtract for Pair, as well as equals and hashcode?"/>
+<node CREATED="1333607700810" ID="ID_611759438" MODIFIED="1333607709424" TEXT="What should the spec be for path?"/>
+<node CREATED="1333607709576" ID="ID_1846804230" MODIFIED="1333607729852" TEXT="What happens if there is nothing in the path?"/>
+<node CREATED="1333607730044" ID="ID_179661269" MODIFIED="1333607738210" TEXT="Should it return null? Or should it just fail?">
+<node CREATED="1333609820651" ID="ID_587350393" MODIFIED="1333609826145" TEXT="Thinking..."/>
+<node CREATED="1333609826372" ID="ID_1107008629" MODIFIED="1333609831668" TEXT="Null doesn&apos;t make sense, does it?"/>
+<node CREATED="1333609831868" ID="ID_1283710055" MODIFIED="1333609852783" TEXT="Because a Path must contain a square"/>
+<node CREATED="1333609852955" ID="ID_1938433744" MODIFIED="1333609860519" TEXT="If it makes no sense, what does that mean?"/>
+<node CREATED="1333609860753" ID="ID_1896577913" MODIFIED="1333609881493" TEXT="And if getStart throws a checked exception it&apos;ll be ridiculous"/>
+<node CREATED="1333609881706" ID="ID_1448769064" MODIFIED="1333609896090" TEXT="No, it would be a programming error if getStart was called with nothing in the Path?"/>
+<node CREATED="1333609896362" ID="ID_771940493" MODIFIED="1333609914285" TEXT="Unless I just leave it up to the implementation?"/>
+<node CREATED="1333609914538" ID="ID_826565090" MODIFIED="1333609960841" TEXT="You should never be able to construct a path that doesn&apos;t have any squares on it, it must be at least a single square long (the same square)"/>
+<node CREATED="1333609960997" ID="ID_746431625" MODIFIED="1333610004526" TEXT="Ok, so the constructor will throw this"/>
+<node CREATED="1333610004691" ID="ID_1762566336" MODIFIED="1333610015366" TEXT="Do I need to say anything in the interface?"/>
+<node CREATED="1333610015553" ID="ID_691181058" MODIFIED="1333610045225" TEXT="If something&apos;s going to construct one of these, it must know about the concrete type"/>
+<node CREATED="1333610045407" ID="ID_60557309" MODIFIED="1333610051660" TEXT="OK, just comment the constructor"/>
 </node>
-<node CREATED="1333549831446" ID="ID_1440941427" MODIFIED="1333549841106" TEXT="Write ant build"/>
+<node CREATED="1333607863988" ID="ID_1862101727" MODIFIED="1333607867811" TEXT="OK, so test the path">
+<node CREATED="1333610294501" ID="ID_67058414" MODIFIED="1333610298612" TEXT="Just a simple test"/>
+<node CREATED="1333610298810" ID="ID_8485564" MODIFIED="1333610306331" TEXT="Ensure that a 1 length path works"/>
+<node CREATED="1333610306536" ID="ID_1596478618" MODIFIED="1333610321795" TEXT="Ensure that it returns the squares in the right order"/>
+<node CREATED="1333610321959" ID="ID_1028493325" MODIFIED="1333610335727" TEXT="Ensure that start and destination work? No errors?"/>
+<node CREATED="1333610563065" ID="ID_1017980583" MODIFIED="1333610568018" TEXT="Should I test the exception?"/>
+<node CREATED="1333610786356" ID="ID_11317832" MODIFIED="1333610792369" TEXT="Hmm, is this strictly unit testing?"/>
+<node CREATED="1333610792577" ID="ID_83777591" MODIFIED="1333610819540" TEXT="Because I am not testing methods, I&apos;m testing "/>
+<node CREATED="1333610901452" ID="ID_869214268" MODIFIED="1333610908630" TEXT="Well, otherwise the tests are going to be rather dull..."/>
+<node CREATED="1333610909475" ID="ID_104055660" MODIFIED="1333610914614" TEXT="OK, seems to make sense here."/>
+<node CREATED="1333610971546" ID="ID_54435819" MODIFIED="1333610979494" TEXT="Do I need to test a multi-square path?"/>
+<node CREATED="1333611002047" ID="ID_1948644776" MODIFIED="1333611011718" TEXT="I don&apos;t think the iterator test is necessary, is it?"/>
+<node CREATED="1333611011899" ID="ID_432786084" MODIFIED="1333611018497" TEXT="Because it&apos;s just a direct call..."/>
+<node CREATED="1333611018813" ID="ID_647940187" MODIFIED="1333611018813" TEXT=""/>
+</node>
+<node CREATED="1333607868011" ID="ID_1627902638" MODIFIED="1333607869316" TEXT="Then what?"/>
+<node CREATED="1333609568875" ID="ID_1568841831" MODIFIED="1333609594273" TEXT="For testing FinderNode, I think I&apos;ll just test KnightAStar">
+<node CREATED="1333609596816" ID="ID_385426625" MODIFIED="1333609612346" TEXT="All I need to do is set up a PQ, pass in my Nodes, then ensure they come out in the right order"/>
+<node CREATED="1333611730852" ID="ID_1045704834" MODIFIED="1333611747568" TEXT="Also test that squaresOnPath or whatever works fine">
+<node CREATED="1333612319781" ID="ID_57722733" MODIFIED="1333612324789" TEXT="Should I be doing this with lists?"/>
+<node CREATED="1333612324986" ID="ID_1920337900" MODIFIED="1333612340007" TEXT="Not sure..."/>
+<node CREATED="1333612340402" ID="ID_119802065" MODIFIED="1333612347390" TEXT="That seems to increase complexity"/>
+<node CREATED="1333612347605" ID="ID_1036792663" MODIFIED="1333612354468" TEXT="But it reduces duplication"/>
+<node CREATED="1333612354693" ID="ID_1208748342" MODIFIED="1333612360169" TEXT="In this case, not too much of a problem"/>
+<node CREATED="1333615626749" ID="ID_1822070898" MODIFIED="1333615632386" TEXT="OK, should I add another of these tests?"/>
+</node>
+<node CREATED="1333611772264" ID="ID_1713131557" MODIFIED="1333611804915" TEXT="No need to test getSquare as it is too simple..."/>
+</node>
+<node CREATED="1333612405868" ID="ID_271542468" MODIFIED="1333612417550" TEXT="In KnightPiece, make the list of moves a private static final!!!">
+<node CREATED="1333618058155" ID="ID_622841645" MODIFIED="1333618063803" TEXT="OK, so I&apos;ve got that done"/>
+<node CREATED="1333618063994" ID="ID_1472321427" MODIFIED="1333618070437" TEXT="But is that what I want to be returning?"/>
+<node CREATED="1333618070639" ID="ID_1833888138" MODIFIED="1333618105346" TEXT="I guess I&apos;m not expecting people to modify it..."/>
+<node CREATED="1333618105552" ID="ID_1785687243" MODIFIED="1333618111396" TEXT="But what should I return? A copy?"/>
+<node CREATED="1333618112070" ID="ID_1800817770" MODIFIED="1333618112070" TEXT=""/>
+</node>
+<node CREATED="1333609612533" ID="ID_1543406687" MODIFIED="1333609630461" TEXT="Then to test PathFinder, I actually just need to test the top level...">
+<node CREATED="1333618705313" ID="ID_285759751" MODIFIED="1333618728678" TEXT="OK, so now we just need to test "/>
+<node CREATED="1333618761751" ID="ID_443161791" MODIFIED="1333618793807" TEXT="So will just test the solve method or whatever"/>
+<node CREATED="1333618794005" ID="ID_1313675223" MODIFIED="1333618805822" TEXT="Just set up some squares and see how it goes..."/>
+<node CREATED="1333622433135" ID="ID_1436831710" MODIFIED="1333622452084" TEXT="OK, even their knight just moved to C7, where there was a piece! So mine can too...phew"/>
+</node>
+</node>
+<node CREATED="1333616569513" ID="ID_955493779" MODIFIED="1333616574027" TEXT="Fix ant jar"/>
 <node CREATED="1333549845753" ID="ID_701929635" MODIFIED="1333549849787" TEXT="Final checkthrough"/>
 </node>
 </node>
