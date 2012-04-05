@@ -1,5 +1,7 @@
 package com.ir.knighttravails.board;
-import com.ir.knighttravails.board.components.*;
+import com.ir.knighttravails.board.components.Square;
+import com.ir.knighttravails.board.components.AlgebraicNotationSquare;
+import com.ir.knighttravails.board.components.Move;
 
 /**
  * Changes the returned type of doMove to AlgebraicNotationSquare. This board 
@@ -14,6 +16,7 @@ public class AlgebraicNotationBoardDecorator extends BoardDecorator {
         super(decoratedBoard);
     }
 
+    @Override
     public Square doMove(Move m) {
         Square end = super.doMove(m);
 

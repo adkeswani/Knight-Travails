@@ -33,16 +33,14 @@ public class SimpleSquareTest {
         Square s1 = new SimpleSquare(new SimplePair(-3, 12));
         Square s2 = new SimpleSquare(new SimplePair(3, 12));
         Square s3 = new SimpleSquare(new SimplePair(7, 42));
-        SimpleSquare s4 = new SimpleSquare(new SimplePair(-3, 12));
-        Pair s5 = null;
-        String s6 = "DEFJ";
+        Pair s4 = null;
+        String s5 = "DEFJ";
 
         assertTrue(s0.equals(s1));
         assertFalse(s0.equals(s2));
         assertFalse(s0.equals(s3));
-        assertTrue(s0.equals(s4));
+        assertFalse(s0.equals(s4));
         assertFalse(s0.equals(s5));
-        assertFalse(s0.equals(s6));
     }
 
     @Test
@@ -53,11 +51,9 @@ public class SimpleSquareTest {
         Square s1 = new SimpleSquare(new SimplePair(-2, 21));
         Square s2 = new SimpleSquare(new SimplePair(2, 21));
         Square s3 = new SimpleSquare(new SimplePair(27, 2));
-        SimpleSquare s4 = new SimpleSquare(new SimplePair(-2, 21));
 
         assertTrue(s0.hashCode() == s1.hashCode());
         assertFalse(s0.hashCode() == s2.hashCode());
         assertFalse(s0.hashCode() == s3.hashCode());
-        assertTrue(s0.hashCode() == s4.hashCode());
     }
 }

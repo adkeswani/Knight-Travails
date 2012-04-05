@@ -33,7 +33,12 @@ public class SimplePair implements Pair {
     }
 
     /**
-     * TODO
+     * An object is considered equal to a SimplePair if it has the same reference or
+     * if it is an instance of SimplePair or one of its subclasses and has the same
+     * x and y coordinates
+     *
+     * @param   obj the object to check equality against
+     * @return  true if the given object is equal to this pair
      */
     @Override
     public final boolean equals(Object obj) {
@@ -49,6 +54,12 @@ public class SimplePair implements Pair {
         return (p.getX() == x && p.getY() == y);
     }
 
+    /**
+     * Creates a hash code based upon the x and y coordinates of the pair, since
+     * these are used to determine equality
+     *
+     * @return hash value for this instance
+     */
     @Override
     public final int hashCode() {
         return new HashCodeBuilder(13, 37).append(x).append(y).toHashCode();

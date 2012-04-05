@@ -23,14 +23,17 @@ public class SimplePath implements Path {
         squares = new LinkedList<Square>(l);
     }
 
+    @Override
     public Square getStart() {
         return squares.get(0);
     }
 
+    @Override
     public Square getDestination() {
         return squares.get(squares.size() - 1);
     }
 
+    @Override
     public Iterator<Square> iterator() {
         return squares.iterator();
     }

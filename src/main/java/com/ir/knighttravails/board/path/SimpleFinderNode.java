@@ -16,10 +16,12 @@ public class SimpleFinderNode implements FinderNode {
         this.prev = prev;
     }
 
+    @Override
     public Square getSquare() {
         return this.current;
     }
 
+    @Override
     public List<Square> getPathSquares() {
         List<Square> path = new LinkedList<Square>();
         path.add(current);

@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import java.util.Iterator;
 
 /**
- * A class that solves the Knight Travails problem
+ * Solver for the Knight's Travails problem
  */
 public class KnightTravailsSolver {
     private static final int CHESS_BOARD_WIDTH = 8;
@@ -18,7 +18,6 @@ public class KnightTravailsSolver {
     public KnightTravailsSolver() {
         Board base = new NoRulesBoard();
         Board rect = new RectangularBoardDecorator(base, new SimplePair(CHESS_BOARD_WIDTH, CHESS_BOARD_HEIGHT));
-
         chessBoard = new AlgebraicNotationBoardDecorator(rect);
         pf = new QueueBasedPathFinder<KnightAStarFinderNode>(new PriorityQueue<KnightAStarFinderNode>(), 
                                                              new KnightAStarFinderNodeFactory());

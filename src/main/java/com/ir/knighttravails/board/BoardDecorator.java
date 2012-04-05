@@ -1,5 +1,6 @@
 package com.ir.knighttravails.board;
-import com.ir.knighttravails.board.components.*;
+import com.ir.knighttravails.board.components.Square;
+import com.ir.knighttravails.board.components.Move;
 
 /**
  * Enables game boards to be built up from multiple types of boards, each
@@ -12,6 +13,7 @@ public abstract class BoardDecorator implements Board {
         this.decoratedBoard = decoratedBoard;
     }
 
+    @Override
     public Square doMove(Move m) {
         return decoratedBoard.doMove(m);
     }

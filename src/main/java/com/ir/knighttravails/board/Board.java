@@ -1,5 +1,6 @@
 package com.ir.knighttravails.board;
-import com.ir.knighttravails.board.components.*;
+import com.ir.knighttravails.board.components.Square;
+import com.ir.knighttravails.board.components.Move;
 
 /**
  * Models a typical 2D game board consisting of a grid of squares.

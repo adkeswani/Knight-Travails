@@ -28,7 +28,12 @@ public class SimpleSquare implements Square {
     }
 
     /**
-     * TODO
+     * An object is considered equal to a SimpleSquare if it has the same reference or
+     * if it is an instance of SimpleSquare or one of its subclasses and has equal
+     * coordinates
+     *
+     * @param   obj the object to check equality against
+     * @return  true if the given object is equal to this pair
      */
     @Override
     public final boolean equals(Object obj) {
@@ -44,6 +49,12 @@ public class SimpleSquare implements Square {
         return (s.coords.equals(coords));
     }
 
+    /**
+     * Creates a hash code based upon the coordinates of the square, since
+     * these are used to determine equality
+     *
+     * @return hash value for this instance
+     */
     @Override
     public final int hashCode() {
         return new HashCodeBuilder(83, 57).append(coords.hashCode()).toHashCode();

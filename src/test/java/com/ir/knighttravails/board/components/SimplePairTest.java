@@ -44,16 +44,14 @@ public class SimplePairTest {
         Pair p1 = new SimplePair(-5, 16);
         Pair p2 = new SimplePair(5, 16);
         Pair p3 = new SimplePair(7, 42);
-        SimplePair p4 = new SimplePair(-5, 16);
-        Pair p5 = null;
-        String p6 = "ABC";
+        Pair p4 = null;
+        String p5 = "ABC";
 
         assertTrue(p0.equals(p1));
         assertFalse(p0.equals(p2));
         assertFalse(p0.equals(p3));
-        assertTrue(p0.equals(p4));
+        assertFalse(p0.equals(p4));
         assertFalse(p0.equals(p5));
-        assertFalse(p0.equals(p6));
     }
 
     @Test
@@ -64,11 +62,9 @@ public class SimplePairTest {
         Pair p1 = new SimplePair(-5, 6);
         Pair p2 = new SimplePair(5, 6);
         Pair p3 = new SimplePair(7, 2);
-        SimplePair p4 = new SimplePair(-5, 6);
 
         assertTrue(p0.hashCode() == p1.hashCode());
         assertFalse(p0.hashCode() == p2.hashCode());
         assertFalse(p0.hashCode() == p3.hashCode());
-        assertTrue(p0.hashCode() == p4.hashCode());
     }
 }

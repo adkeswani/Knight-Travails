@@ -24,6 +24,7 @@ public class QueueBasedPathFinder<T extends FinderNode> implements PathFinder {
         this.nodeFactory = nodeFactory;
     }
 
+    @Override
     public Path findPath(Board b, Piece p, Square destination) {
         Set<Square> visited = new HashSet<Square>();
 

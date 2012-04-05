@@ -1,5 +1,7 @@
 package com.ir.knighttravails.board;
-import com.ir.knighttravails.board.components.*;
+import com.ir.knighttravails.board.components.Pair;
+import com.ir.knighttravails.board.components.Square;
+import com.ir.knighttravails.board.components.Move;
 
 /**
  * Restricts moves to starting and ending within a rectangular board.
@@ -14,7 +16,8 @@ public class RectangularBoardDecorator extends BoardDecorator {
     /**
      * Constructor that sets the width and height of the board
      *
-     * @param   size the new size of the board, must have x and y values greater than or equal to 1
+     * @param   size the new size of the board, must have x and y values greater 
+     *          than or equal to 1
      */
     public RectangularBoardDecorator(Board decoratedBoard, Pair size) {
         super(decoratedBoard);
@@ -46,7 +49,7 @@ public class RectangularBoardDecorator extends BoardDecorator {
 
     /**
      * Checks that the given co-ordinates are within the board rectangle.
-     * Note that the rectangle's x co-ordinates range from 0 to (size.getX() - 1) inclusive
+     * Note that the board's x co-ordinates range from 0 to (size.getX() - 1) inclusive
      * and the y co-ordinates range from from 0 to (size.getY() - 1) inclusive
      *
      * @param   coords the co-ordinates to check

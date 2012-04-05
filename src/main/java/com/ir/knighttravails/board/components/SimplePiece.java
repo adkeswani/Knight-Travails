@@ -13,14 +13,17 @@ public abstract class SimplePiece implements Piece {
         this.current = current;
     }
 
+    @Override
     public Square getCurrent() {
         return current;
     }
 
+    @Override
     public void setCurrent(Square current) {
         this.current = current;
     }
 
+    @Override
     public Set<Square> validDestinations(Board b) {
         Set<Square> destinations = new HashSet<Square>();
 

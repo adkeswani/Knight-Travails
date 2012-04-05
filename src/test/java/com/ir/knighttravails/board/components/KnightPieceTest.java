@@ -1,5 +1,7 @@
 package com.ir.knighttravails.board.components;
-import com.ir.knighttravails.board.*;
+import com.ir.knighttravails.board.Board;
+import com.ir.knighttravails.board.RectangularBoardDecorator;
+import com.ir.knighttravails.board.NoRulesBoard;
 import java.util.Collection;
 
 import org.junit.*;

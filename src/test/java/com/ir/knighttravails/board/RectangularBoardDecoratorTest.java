@@ -1,5 +1,9 @@
 package com.ir.knighttravails.board;
-import com.ir.knighttravails.board.components.*;
+import com.ir.knighttravails.board.components.Pair;
+import com.ir.knighttravails.board.components.SimplePair;
+import com.ir.knighttravails.board.components.Square;
+import com.ir.knighttravails.board.components.SimpleSquare;
+import com.ir.knighttravails.board.components.SimpleMove;
 
 import org.junit.*;
 import static org.junit.Assert.*;

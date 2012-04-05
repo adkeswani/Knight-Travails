@@ -12,10 +12,12 @@ public class SimpleMove implements Move {
         this.distance = distance;
     }
 
+    @Override
     public Square getStart() {
         return start;
     }
 
+    @Override
     public Pair getDistance() {
         return distance;
     }
