@@ -21,7 +21,7 @@ public class AlgebraicNotationSquare extends SimpleSquare {
      * Constructs a square at the given co-ordinates after ensuring that
      * they are not negative
      *
-     * @param   co-ordinates of the square to be created
+     * @param   coords co-ordinates of the square to be created
      */
     public AlgebraicNotationSquare(Pair coords) {
         super(coords);

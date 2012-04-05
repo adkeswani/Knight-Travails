@@ -8,7 +8,7 @@ import com.ir.knighttravails.board.components.Move;
  * does not support squares with negative co-ordinates, and so should decorate
  * a board that enforces this, such as RectangularBoardDecorator.
  *
- * @see #AlgebraicNotationSquare
+ * @see AlgebraicNotationSquare
  *
  */
 public class AlgebraicNotationBoardDecorator extends BoardDecorator {

@@ -15,6 +15,8 @@
     <property name="jar.lib.dir"        location="${target.jar.dir}/lib"/>
     <property name="jar.classpath"      value="lib/junit-4.10.jar lib/commons-lang-2.6.jar"/>
 
+    <property name="target.docs.dir"      value="${target.dir}/docs"/>
+
     <property name="lib.dir"            location="lib"/>
     <property name="libs"               location="${lib.dir}/junit-4.10.jar:${lib.dir}/commons-lang-2.6.jar"/>
 
@@ -74,5 +76,10 @@
                 <attribute name="Class-Path" value="${jar.classpath}"/>
             </manifest>
         </jar>
+    </target>
+
+    <target name="docs" depends="init">
+        <mkdir dir="${target.docs.dir}"/>
+        <javadoc destdir="${target.docs.dir}" sourcepath="${src.main.dir}" classpath="${libs}" windowTitle="The Knight's Travails API"/>
     </target>
 </project>
