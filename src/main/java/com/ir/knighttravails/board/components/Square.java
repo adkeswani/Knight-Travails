@@ -7,12 +7,16 @@ package com.ir.knighttravails.board.components;
  */
 public interface Square {
     /**
-     * @return co-ordinates of the square
+     * @return  co-ordinates of the square
      */
     public Pair getCoords();
 
     /**
-     * TODO
+     * Returns the Manhattan distance from this square to another.
+     * The components of the returned pair will always be positive.
+     * 
+     * @param   other the square to calculate the distance to
+     * @return  the x and y Manhattan distances to the other square
      */
-    //public Pair getDistance(Square other);
+    public Pair distanceTo(Square other);
 }

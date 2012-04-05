@@ -20,4 +20,10 @@ public interface Pair {
      * @return  a pair with the given pair's x and y values added onto this one's
      */
     public Pair add(Pair other);
+
+    /**
+     * @param   other the pair to subtract this pair
+     * @return  a pair with the given pair's x and y values subtracted from this one's
+     */
+    public Pair subtract(Pair other);
 }

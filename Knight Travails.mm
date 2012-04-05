@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1333249026824" ID="ID_757416660" MODIFIED="1333249035038" TEXT="Knight Travails">
-<node CREATED="1333249036202" ID="ID_437956164" MODIFIED="1333249039334" POSITION="right" TEXT="Classes">
+<node CREATED="1333249036202" FOLDED="true" ID="ID_437956164" MODIFIED="1333549909505" POSITION="right" TEXT="Classes">
 <node CREATED="1333249065702" ID="ID_279823825" MODIFIED="1333249087812" TEXT="PathFinder">
 <node CREATED="1333249610488" ID="ID_382334570" MODIFIED="1333258111608" TEXT="Constructor: A Board"/>
 <node CREATED="1333249233818" ID="ID_1709514601" MODIFIED="1333249626504" TEXT="Input: Start and end square"/>
@@ -312,7 +312,7 @@
 <node CREATED="1333351747217" ID="ID_1223170601" MODIFIED="1333351779479" TEXT="Maybe an abstract class could convey this?"/>
 </node>
 </node>
-<node CREATED="1333335359248" ID="ID_297541835" MODIFIED="1333335363897" POSITION="right" TEXT="is move REALLY necessary?">
+<node CREATED="1333335359248" FOLDED="true" ID="ID_297541835" MODIFIED="1333549907959" POSITION="right" TEXT="is move REALLY necessary?">
 <node CREATED="1333413147467" ID="ID_266758448" MODIFIED="1333413152728" TEXT="Trying to decide this now"/>
 <node CREATED="1333413376686" ID="ID_1293130652" MODIFIED="1333413411574" TEXT="Well, it can give you the starting coord and the distance moved"/>
 <node CREATED="1333413423004" ID="ID_1940450168" MODIFIED="1333413437902" TEXT="After a move has been made, can it really change?"/>
@@ -322,7 +322,7 @@
 <node CREATED="1333413663687" ID="ID_1751213095" MODIFIED="1333413672141" TEXT="Or I can expose it and show that&apos;s all a move is..."/>
 <node CREATED="1333413825972" ID="ID_1125898432" MODIFIED="1333413835679" TEXT="I&apos;d rather give the opportunity to extend"/>
 </node>
-<node CREATED="1333415749463" ID="ID_1306145506" MODIFIED="1333415751076" POSITION="right" TEXT="Issues">
+<node CREATED="1333415749463" FOLDED="true" ID="ID_1306145506" MODIFIED="1333549906585" POSITION="right" TEXT="Issues">
 <node CREATED="1333415752156" ID="ID_1629977421" MODIFIED="1333415761588" TEXT="What should the Rectangular class be called?">
 <node CREATED="1333415772104" ID="ID_1459727966" MODIFIED="1333415790655" TEXT="Well, for consistency, just name it with Decorator"/>
 </node>
@@ -382,7 +382,7 @@
 </node>
 </node>
 <node CREATED="1333424241981" ID="ID_513280927" MODIFIED="1333424265392" POSITION="right" TEXT="I don&apos;t think it&apos;s necessary to create a decorator for Pair because it&apos;s not going to be changed at runtime or layered much"/>
-<node CREATED="1333427215063" ID="ID_1610085056" MODIFIED="1333427217177" POSITION="right" TEXT="Todo">
+<node CREATED="1333427215063" FOLDED="true" ID="ID_1610085056" MODIFIED="1333549904881" POSITION="right" TEXT="Todo">
 <node CREATED="1333427218101" ID="ID_497862954" MODIFIED="1333427231025" TEXT="Sort out this 0-indexed position thing">
 <node CREATED="1333427883578" ID="ID_1723798694" MODIFIED="1333427903830" TEXT="OK, so if I just use a comment in Pair"/>
 <node CREATED="1333427888981" ID="ID_1950455477" MODIFIED="1333427899309" TEXT="I would say that we assume that the 1st position is (0,0)"/>
@@ -413,7 +413,7 @@
 <node CREATED="1333427979253" ID="ID_1925655708" MODIFIED="1333427984105" TEXT="Maybe look into this a LOT later"/>
 </node>
 </node>
-<node CREATED="1333429082860" ID="ID_1650994815" MODIFIED="1333429092974" POSITION="right" TEXT="AlgNotPair issue">
+<node CREATED="1333429082860" FOLDED="true" ID="ID_1650994815" MODIFIED="1333549903169" POSITION="right" TEXT="AlgNotPair issue">
 <node CREATED="1333429094067" ID="ID_1174428973" MODIFIED="1333429911839" TEXT="Does this mean reintroducing squares?"/>
 <node CREATED="1333429912046" ID="ID_183987197" MODIFIED="1333429937172" TEXT="Well, I just realised I&apos;ll need a distance method to work out distances between them"/>
 <node CREATED="1333429937411" ID="ID_789424250" MODIFIED="1333429953363" TEXT="OK, so if I have squares, what does that change?"/>
@@ -434,7 +434,7 @@
 </node>
 </node>
 <node CREATED="1333432570484" ID="ID_1805584603" MODIFIED="1333432579557" POSITION="right" TEXT="Later figure out how to deal with these long lines..."/>
-<node CREATED="1333441886429" ID="ID_789760565" MODIFIED="1333441893799" POSITION="right" TEXT="What to put Squares, Moves etc. in?">
+<node CREATED="1333441886429" FOLDED="true" ID="ID_789760565" MODIFIED="1333549901759" POSITION="right" TEXT="What to put Squares, Moves etc. in?">
 <node CREATED="1333441902577" ID="ID_1385796049" MODIFIED="1333441911852" TEXT="I&apos;ve got com.ir.knighttravails.board"/>
 <node CREATED="1333441912026" ID="ID_9440513" MODIFIED="1333441917781" TEXT="And these all belong to board"/>
 <node CREATED="1333441917981" ID="ID_158943349" MODIFIED="1333441995457" TEXT="So they&apos;re components of it?"/>
@@ -443,7 +443,7 @@
 <node CREATED="1333442265069" ID="ID_709292485" MODIFIED="1333442274116" TEXT="Do I want to break it down even more? Not particularly..."/>
 <node CREATED="1333442498346" ID="ID_493429059" MODIFIED="1333442509410" TEXT="Hmm, I think my way is OK at the moment, not too bad"/>
 </node>
-<node CREATED="1333443472888" ID="ID_1670337020" MODIFIED="1333444302295" POSITION="right" TEXT="OK, starting tests now. What to test?">
+<node CREATED="1333443472888" FOLDED="true" ID="ID_1670337020" MODIFIED="1333549900705" POSITION="right" TEXT="OK, starting tests now. What to test?">
 <node CREATED="1333443732311" ID="ID_131297068" MODIFIED="1333443735880" TEXT="Simple2DCGPair">
 <node CREATED="1333444188959" ID="ID_156986073" MODIFIED="1333445546853" TEXT="Test that getValue works fine, only one necessary, since I know what&apos;s inside....">
 <node CREATED="1333445829266" ID="ID_981565808" MODIFIED="1333445838967" TEXT="No need, way too simple, cannot really break..."/>
@@ -471,10 +471,10 @@
 <node CREATED="1333447220289" ID="ID_1968878679" MODIFIED="1333447231991" POSITION="right" TEXT="OK, so I&apos;m testing the concrete implementations at the moment..."/>
 <node CREATED="1333447233361" ID="ID_1087882733" MODIFIED="1333447235060" POSITION="right" TEXT="OK..."/>
 <node CREATED="1333450704972" ID="ID_1810214027" MODIFIED="1333450712539" POSITION="right" TEXT="Something wrong with throwing the exception...."/>
-<node CREATED="1333450940481" ID="ID_1534349654" MODIFIED="1333450943991" POSITION="right" TEXT="Compilation">
+<node CREATED="1333450940481" FOLDED="true" ID="ID_1534349654" MODIFIED="1333549899062" POSITION="right" TEXT="Compilation">
 <node CREATED="1333450957768" ID="ID_1773351" MODIFIED="1333450957768" TEXT="javac -cp ./target/test-classes:/usr/share/java/junit4.jar -sourcepath ./src/main/java -d ./target/test-classes/ ./src/main/java/com/ir/knighttravails/board/components/*.java"/>
 </node>
-<node CREATED="1333451187901" ID="ID_1824332904" MODIFIED="1333451196695" POSITION="right" TEXT="Can I see why these calls are a bad idea?">
+<node CREATED="1333451187901" FOLDED="true" ID="ID_1824332904" MODIFIED="1333549896992" POSITION="right" TEXT="Can I see why these calls are a bad idea?">
 <node CREATED="1333451197870" ID="ID_360108118" MODIFIED="1333451203906" TEXT="Partially created objects floating around"/>
 <node CREATED="1333451204147" ID="ID_197072737" MODIFIED="1333451854705" TEXT="Weird stuff where you access fields that are only created later...?"/>
 <node CREATED="1333451854962" ID="ID_1714936328" MODIFIED="1333451882232" TEXT="You should be able to use methods to  do things not done in constructor"/>
@@ -487,7 +487,7 @@
 <node CREATED="1333454413581" ID="ID_736408361" MODIFIED="1333454423341" POSITION="right" TEXT="OK, use checked or unchecked exceptions?">
 <node CREATED="1333454424146" ID="ID_817409960" MODIFIED="1333454428276" TEXT="Is this a recoverable error?"/>
 </node>
-<node CREATED="1333454625336" ID="ID_1478275951" MODIFIED="1333454628315" POSITION="right" TEXT="AlgNotSquare">
+<node CREATED="1333454625336" FOLDED="true" ID="ID_1478275951" MODIFIED="1333549894891" POSITION="right" TEXT="AlgNotSquare">
 <node CREATED="1333454629377" ID="ID_896906533" MODIFIED="1333454634088" TEXT="Unchecked or checked?">
 <node CREATED="1333454911834" ID="ID_146228011" MODIFIED="1333454925427" TEXT="So checked should be thrown unless it&apos;s an unrecoverable error"/>
 <node CREATED="1333454925628" ID="ID_402263618" MODIFIED="1333454940379" TEXT="In the case of bad data, I think it should be recoverable, you just try something else"/>
@@ -525,7 +525,7 @@
 <node CREATED="1333460785022" ID="ID_1628708890" MODIFIED="1333460793360" TEXT="Will write remaining tests tomorrow?"/>
 <node CREATED="1333460796828" ID="ID_1473567566" MODIFIED="1333460801059" TEXT="Running rather behind...!"/>
 </node>
-<node CREATED="1333461678849" ID="ID_1731807804" MODIFIED="1333461681498" POSITION="right" TEXT="Todo">
+<node CREATED="1333461678849" FOLDED="true" ID="ID_1731807804" MODIFIED="1333549892714" POSITION="right" TEXT="Todo">
 <node CREATED="1333461682587" ID="ID_126150939" MODIFIED="1333461694175" TEXT="Finish AlgNot and its tests">
 <node CREATED="1333506161990" ID="ID_1922391028" MODIFIED="1333506163498" TEXT="OK, done."/>
 </node>
@@ -769,12 +769,78 @@
 <node CREATED="1333545784792" ID="ID_667385781" MODIFIED="1333545822025" TEXT="Let&apos;s use args, easier"/>
 </node>
 <node CREATED="1333547942130" ID="ID_1141852990" MODIFIED="1333547950065" TEXT="IT WORKS!! RAAAAWWWWWK!"/>
+<node CREATED="1333548047888" ID="ID_1574219202" MODIFIED="1333548056813" TEXT="Now, to finish off with the A* version or not...">
+<node CREATED="1333549063967" ID="ID_1665118003" MODIFIED="1333549067464" TEXT="OK, how will this work?"/>
+<node CREATED="1333549067600" ID="ID_815679550" MODIFIED="1333549076790" TEXT="Need to compare FinderNodes against each other"/>
+<node CREATED="1333549076924" ID="ID_1081346819" MODIFIED="1333549133865" TEXT="So should I extend SimpleFinderNode?"/>
+<node CREATED="1333549134021" ID="ID_1896094074" MODIFIED="1333549142110" TEXT="Yes, because I don&apos;t need to add anything to it"/>
+<node CREATED="1333549142261" ID="ID_326886968" MODIFIED="1333549195497" TEXT="But I need to add a method, so yes, seems like subclass is the way to go"/>
+<node CREATED="1333549195646" ID="ID_1644728780" MODIFIED="1333549197906" TEXT="However..."/>
+<node CREATED="1333549198175" ID="ID_113336242" MODIFIED="1333549206784" TEXT="I can also achieve this via a comparator"/>
+<node CREATED="1333549207748" ID="ID_539621455" MODIFIED="1333549279684" TEXT="So why did I do all of this?"/>
+<node CREATED="1333549279857" ID="ID_1324964857" MODIFIED="1333549316413" TEXT="So that I can use any type of queue I want and any type of underlying node"/>
+<node CREATED="1333549316573" ID="ID_1795334150" MODIFIED="1333549325984" TEXT="At the moment it&apos;s a linked list and simple node"/>
+<node CREATED="1333549326166" ID="ID_289740584" MODIFIED="1333549339588" TEXT="But instead I could use a priority queue with an a* simple node"/>
+<node CREATED="1333549339736" ID="ID_1029606544" MODIFIED="1333549347090" TEXT="So that&apos;s what this lets me do"/>
+<node CREATED="1333549347340" ID="ID_1371029295" MODIFIED="1333549361088" TEXT="And there was no other way to do it because?"/>
+<node CREATED="1333549361326" ID="ID_1065422297" MODIFIED="1333549425763" TEXT="Well, I wouldn&apos;t have been able to have this generalised Queue Based finder"/>
+<node CREATED="1333549584864" ID="ID_1454141829" MODIFIED="1333549592614" TEXT="OK, so comparable is the way to go?"/>
+<node CREATED="1333549592775" ID="ID_1409948485" MODIFIED="1333549609432" TEXT="Yes, otherwise I&apos;d need a whole bunch of other stuff?"/>
+</node>
 </node>
 </node>
 </node>
 <node CREATED="1333461858100" ID="ID_1205085088" MODIFIED="1333461862138" TEXT="Write tests for that"/>
 <node CREATED="1333461862371" ID="ID_1311374328" MODIFIED="1333461869474" TEXT="Complete ant script"/>
 <node CREATED="1333515386248" ID="ID_373903813" MODIFIED="1333515391792" TEXT="Protected is OK to use?"/>
+</node>
+<node CREATED="1333549770023" ID="ID_1661866112" MODIFIED="1333549772823" POSITION="right" TEXT="Todo tomorrow">
+<node CREATED="1333549783818" ID="ID_1063092152" MODIFIED="1333586152187" TEXT="Write all documentation">
+<node CREATED="1333588122998" ID="ID_758375264" MODIFIED="1333588124187" TEXT=" Done!"/>
+</node>
+<node CREATED="1333586153220" ID="ID_322316739" MODIFIED="1333586168035" TEXT="What happens if there is no path, won&apos;t this loop forever?!">
+<node CREATED="1333586408212" ID="ID_1983554464" MODIFIED="1333586413323" TEXT="A collection of squares"/>
+<node CREATED="1333586413604" ID="ID_1026019487" MODIFIED="1333586428804" TEXT="Check if the current square is already contained in it"/>
+<node CREATED="1333588427073" ID="ID_14484350" MODIFIED="1333588428073" TEXT="Done."/>
+</node>
+<node CREATED="1333549774092" ID="ID_422978491" MODIFIED="1333588743824" TEXT="Finish up FinderNode and do all cleanup">
+<node CREATED="1333588780817" ID="ID_1892419511" MODIFIED="1333588786870" TEXT="OK, so I want some sort of A* creature"/>
+<node CREATED="1333588787109" ID="ID_1406724868" MODIFIED="1333588837657" TEXT="It should be in a priority queue"/>
+<node CREATED="1333588837900" ID="ID_1944929844" MODIFIED="1333588869800" TEXT="So the Nodes should be comparable"/>
+<node CREATED="1333588869998" ID="ID_242152551" MODIFIED="1333588877647" TEXT="A* = distance from start + distance to end"/>
+<node CREATED="1333588877864" ID="ID_176256158" MODIFIED="1333588893044" TEXT="From start is simple, it&apos;s just a slight addition to the class"/>
+<node CREATED="1333588893252" ID="ID_1341228371" MODIFIED="1333588901021" TEXT="But distance t o end..."/>
+<node CREATED="1333589067065" ID="ID_262162392" MODIFIED="1333589076228" TEXT="It&apos;s going to have to be really specific, isn&apos;t it?"/>
+<node CREATED="1333589076743" ID="ID_230147474" MODIFIED="1333589498350" TEXT="Well heuristic is: take longer edge and divide by 2">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1333589440758" ID="ID_281649971" MODIFIED="1333589450375" TEXT="But I can make a heuristic specifically for knights"/>
+<node CREATED="1333589450593" ID="ID_51505145" MODIFIED="1333589459193" TEXT="It&apos;ll still work for others, just not as well"/>
+<node CREATED="1333589459389" ID="ID_1230577073" MODIFIED="1333589479486" TEXT="So I&apos;ll create an A*FinderNode">
+<node CREATED="1333590001483" ID="ID_759455857" MODIFIED="1333590007794" TEXT="OK, how does it know its destination??"/>
+<node CREATED="1333590018664" ID="ID_5726156" MODIFIED="1333590103438" TEXT="Darn...does this mean I have to send it in??"/>
+<node CREATED="1333590104793" ID="ID_1936938872" MODIFIED="1333590113922" TEXT="Hmm, would need to modify factory"/>
+<node CREATED="1333590114703" ID="ID_1417202829" MODIFIED="1333590179436" TEXT="I don&apos;t think I have any other choice, how else would it get the info?"/>
+<node CREATED="1333590976078" ID="ID_737997501" MODIFIED="1333590980870" TEXT="OK, added to factory"/>
+</node>
+<node CREATED="1333590981869" ID="ID_1559467781" MODIFIED="1333591029971" TEXT="Should I just create those fields and implement compareTo? And then expect the implementor to do the rest?"/>
+<node CREATED="1333591045829" ID="ID_503760680" MODIFIED="1333591049548" TEXT="Yep, I can do that!"/>
+<node CREATED="1333589479698" ID="ID_1672967499" MODIFIED="1333589495006" TEXT="And then one specifically for Knights."/>
+</node>
+<node CREATED="1333586973305" ID="ID_1595651826" MODIFIED="1333595112238" TEXT="Sort out KnightTravails">
+<node CREATED="1333595116198" ID="ID_1949543571" MODIFIED="1333595123295" TEXT="What should interface be?"/>
+<node CREATED="1333595123492" ID="ID_1604093981" MODIFIED="1333595127213" TEXT="Should it just print path?"/>
+<node CREATED="1333595127401" ID="ID_1911591924" MODIFIED="1333595134271" TEXT="Or should main be expected to print it itself?"/>
+<node CREATED="1333595135088" ID="ID_1781299128" MODIFIED="1333595142022" TEXT="It&apos;s better to just return path I think..."/>
+<node CREATED="1333595142357" ID="ID_76858790" MODIFIED="1333595157601" TEXT="We&apos;ll let main pass in strings"/>
+<node CREATED="1333595113471" ID="ID_1607739246" MODIFIED="1333595114216" TEXT=" so that it doesn&apos;t print first square"/>
+<node CREATED="1333597725865" ID="ID_1455627692" MODIFIED="1333597729730" TEXT="OK, cleaned up."/>
+</node>
+<node CREATED="1333549796205" ID="ID_1925491866" MODIFIED="1333549799430" TEXT="Write tests">
+<node CREATED="1333591805979" ID="ID_1585099657" MODIFIED="1333591897360" TEXT="Subtract for Pair, as well as equals and hashcode?"/>
+</node>
+<node CREATED="1333549831446" ID="ID_1440941427" MODIFIED="1333549841106" TEXT="Write ant build"/>
+<node CREATED="1333549845753" ID="ID_701929635" MODIFIED="1333549849787" TEXT="Final checkthrough"/>
 </node>
 </node>
 </map>

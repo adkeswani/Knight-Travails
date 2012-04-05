@@ -3,16 +3,11 @@
         builds and runs the knight travails program and tests
     </description>
 
-    <property name="
+    <property name="src.main.dir"       location="src/main/java">
+    <property name="target.main.dir"    location="target/classes"/>
 
-    <property name="src.dir"        location="src/main/java"/>
-    <property name="target.dir"     location="target/classes"/>
-
-    <property name="src.tests.dir"  location="src/test/java"/>
-    <property name="target.tests.dir"     location="target"/>
-
-
-    <property name="dist"  location="dist"/>
+    <property name="src.test.dir"       location="src/test/java"/>
+    <property name="target.test.dir"    location="target/test-classes"/>
 
     <target name="init">
     <!-- Create the time stamp -->

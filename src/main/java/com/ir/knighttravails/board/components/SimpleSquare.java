@@ -21,6 +21,12 @@ public class SimpleSquare implements Square {
         return coords;
     }
 
+    @Override
+    public Pair distanceTo(Square other) {
+        Pair p = coords.subtract(other.getCoords());
+        return new SimplePair(Math.abs(p.getX()), Math.abs(p.getY()));
+    }
+
     /**
      * TODO
      */

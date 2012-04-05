@@ -27,6 +27,11 @@ public class SimplePair implements Pair {
         return new SimplePair(x + other.getX(), y + other.getY());
     }
 
+    @Override
+    public Pair subtract(Pair other) {
+        return new SimplePair(x - other.getX(), y - other.getY());
+    }
+
     /**
      * TODO
      */
